@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "real-time-voice-cloning"
+name = "voiceover"
 version = "0.1.0"
 description = ""
 authors = ["malyvsen <5940672+malyvsen@users.noreply.github.com>"]
@@ -24,7 +24,7 @@ numba = "^0.53.1"
 webrtcvad = "^2.0.10"
 
 [tool.poetry.dev-dependencies]
-black = {version = "^21.5b1", allow-prereleases = true}
+black = { version = "^21.5b1", allow-prereleases = true }
 jupyter = "^1.0.0"
 
 [build-system]
