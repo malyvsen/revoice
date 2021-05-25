@@ -3,6 +3,8 @@ import utils
 
 
 def render():
+    st.title("Let's clone a voice!")
+    st.text("Have fun - but stay safe! Impersonating people is (probably) illegal.")
     voice_file = st.file_uploader(
         "Voice to clone",
         type=["wav", "mp3", "m4a", "ogg", "flac"],
