@@ -23,6 +23,7 @@ multiprocess = "^0.70.11"
 numba = "^0.53.1"
 webrtcvad = "^2.0.10"
 epitran = "^1.11"
+streamlit = "^0.82.0"
 
 [tool.poetry.dev-dependencies]
 black = { version = "^21.5b1", allow-prereleases = true }
