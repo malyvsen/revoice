@@ -41,13 +41,6 @@ MAX_WAVES = 15
 
 class Toolbox:
     def __init__(self, datasets_root, enc_models_dir, syn_models_dir, voc_models_dir, seed, no_mp3_support):
-        if not no_mp3_support:
-            try:
-                librosa.load("samples/6829_00000.mp3")
-            except NoBackendError:
-                print("Librosa will be unable to open mp3 files if additional software is not installed.\n"
-                  "Please install ffmpeg or add the '--no_mp3_support' option to proceed without support for mp3 files.")
-                exit(-1)
         self.no_mp3_support = no_mp3_support
         sys.excepthook = self.excepthook
         self.datasets_root = datasets_root
