@@ -36,8 +36,8 @@ def get_synthesizer():
     return Synthesizer(synthesizer_path)
 
 
-def text_to_spectrogram(text, voice_embedding):
-    sentence_endings = ".?!\n"
+def text_to_spectrogram(text, voice_embedding, split_sentences: bool):
+    sentence_endings = ".?!\n" if split_sentences else "\n"
     sentences = [text]
     for ending in sentence_endings:
         sentences = [
