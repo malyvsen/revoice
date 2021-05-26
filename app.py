@@ -30,5 +30,4 @@ def render():
     utils.download_audio(audio, label="Click to download", widget=right.empty())
 
 
-utils.init()
 render()
