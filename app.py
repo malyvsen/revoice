@@ -40,5 +40,14 @@ def render():
     utils.play_audio(audio, widget=left.empty())
     utils.download_audio(audio, label="Click to download", widget=right.empty())
 
+    with st.beta_expander("Don't like how it sounds?"):
+        st.write(
+            'First off, try pressing "Read it" again. You might get lucky next time.'
+        )
+        st.write("If that doesn't help, try changing word order.")
+        st.write(
+            "If the end of a sentence is getting gobbled up, try adding a few more words there."
+        )
+
 
 render()
