@@ -3,6 +3,7 @@ import requests
 from pathlib import Path
 import zipfile
 import tempfile
+from io import BytesIO
 import numpy as np
 import librosa
 from encoder import inference as encoder
@@ -25,7 +26,7 @@ def prepare_models():
         response = requests.get(
             "https://github.com/blue-fish/Real-Time-Voice-Cloning/releases/download/v1.0/pretrained.zip"
         )
-        zip_file = zipfile.ZipFile(response.content)
+        zip_file = zipfile.ZipFile(BytesIO(response.content))
         zip_file.extractall("./")
     encoder.load_model(encoder_path)
     vocoder.load_model(vocoder_path)
