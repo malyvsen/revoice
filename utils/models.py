@@ -32,7 +32,7 @@ def prepare_models():
     vocoder.load_model(vocoder_path)
 
 
-@st.cache
+@st.cache(allow_output_mutation=True)
 def get_synthesizer():
     return Synthesizer(synthesizer_path)
 
